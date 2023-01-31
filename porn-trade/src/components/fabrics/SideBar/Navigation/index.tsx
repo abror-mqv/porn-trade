@@ -1,41 +1,46 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "../MenuItem/index";
-import AIPic from './ai.png'
+import { Link } from "react-router-dom";
 const variants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    y: 0,
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  }
+    y: -400,
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
 };
 
-export const Navigation = () => (
-  <motion.ul variants={variants}>
-    <MenuItem i={0} key={0} data={data[0]} />
-    <MenuItem i={1} key={1} data={data[1]} />
-    <MenuItem i={2} key={2} data={data[2]} />
-    <MenuItem i={3} key={3} data={data[0]} />
+export const Navigation = ({ toggle }: any) => (
+  <motion.ul variants={variants} onClick={toggle}>
+    <MenuItem i={0} key={0} data={data[0]} onClick={toggle} />
+    <MenuItem i={1} key={1} data={data[1]} onClick={toggle} />
+    <MenuItem i={2} key={2} data={data[2]} onClick={toggle} />
+    <MenuItem i={3} key={3} data={data[3]} onClick={toggle} />
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
-
 const data = [
-  {   
+  {
     picture: "ai.png",
     title: "Робот и акча",
-    link: "string"
+    link: "/",
   },
   {
     picture: "stock.png",
     title: "Как пользоваться?",
-    link: "string"
+    link: "/about",
   },
   {
     picture: "dollar.png",
-    title: "Как отмыть?",
-    link: "string"
+    title: "Как приобрести",
+    link: "/get",
+  },
+  {
+    picture: "rocket.png",
+    title: "Играть",
+    link: "/play"
   }
-]
+];

@@ -1,20 +1,30 @@
 body {
   background-color: #00bbff;
-  color: white;
+  color: #bec0c2;
 }
 .Blub {
-  background-image: url("./blob-1.gif");
+  /* background-image: url("./blob-1.gif"); */
+  background-image: url("../public/media/blob-1.svg");
+  /* background-color: #00bbff; */
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+
 }
 
+.App {
+  background-color: #00bbff;
+}
+.App-2 {
+  background-color: blue;
+}
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 0px;
   z-index: 999999;
 }
 
@@ -24,7 +34,7 @@ nav {
   left: 0;
   bottom: 0;
   width: 300px;
-  background: #fff;
+  background: #ffffff;
 }
 
 button {
@@ -41,6 +51,7 @@ button {
   height: 50px;
   border-radius: 50%;
   background: transparent;
+  z-index: 99999999999 !important;
 }
 
 ul,
@@ -92,4 +103,27 @@ li {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.168);
+  transform-origin: 0%;
+  transform: rotate(0deg);
+}
+
+.EX {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0 !important;
+}
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
 }

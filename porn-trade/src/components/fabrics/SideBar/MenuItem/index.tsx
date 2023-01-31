@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const variants = {
   open: {
     y: 0,
@@ -41,18 +41,20 @@ export const MenuItem = ({ i, data }: any) => {
     font-size: 14px;
   `;
   return (
-    <motion.li
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <StyledMenuItem
-        className="icon-placeholder"
-        style={style}
-      ></StyledMenuItem>
-      <StyledFuckingText className="text-placeholder" style={style}>
-        {data.title}
-      </StyledFuckingText>
-    </motion.li>
+    <Link to={data.link}>
+      <motion.li
+        variants={variants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <StyledMenuItem
+          className="icon-placeholder"
+          style={style}
+        ></StyledMenuItem>
+        <StyledFuckingText className="text-placeholder" style={style}>
+          {data.title}
+        </StyledFuckingText>
+      </motion.li>
+    </Link>
   );
 };

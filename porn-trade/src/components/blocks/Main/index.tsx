@@ -1,33 +1,44 @@
-import React from "react";
 import styled from "styled-components";
 import TitleOne from "../../fabrics/Title-1";
 import TitleTwo from "../../fabrics/Title-2";
 import { motion, Variants } from "framer-motion";
 import Results from "../../fabrics/Results";
 import RunLine from "../../fabrics/RunLine";
-import DialogueLeft from "../../fabrics/Dialogue/left";
-import DialogueRight from "../../fabrics/Dialogue/right";
 
 export default function Main() {
   const StyledMain = styled.main`
-    height: max-content;
+    height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 10;
+    position: relative;
     .Blub {
       height: 350px;
       width: 100vw;
-      margin-left: -20px;
-      z-index: 1000000;
+      /* margin-left: -20px; */
+      z-index: 9000000;
+
     }
     .FMC {
-      margin-bottom: 80px;
+      margin-bottom: 10px;
     }
-    .Abs{
+    .Abs {
       position: absolute;
+    }
+    .Results {
+      width: 100%;
+      height: max-content;
+      margin-bottom: 80px;
+      margin-top: 30px;
+    }
+    .Title{
+      max-width: 80%;
+      margin-left: 10%;
     }
   `;
   return (
-    <StyledMain>
-      <RunLine/>
+    <StyledMain className="top">
+      <RunLine />
       <motion.div
         className="FMC"
         initial="offscreen"
@@ -35,94 +46,16 @@ export default function Main() {
         viewport={{ once: false, amount: 0.1 }}
       >
         <motion.div className="Blub" variants={blobVariants}></motion.div>
-        <motion.div variants={titleVariants}>
-          <TitleOne>LUCKY BOT - AI RINGOTRADE PREDICTOR</TitleOne>
+        <motion.div variants={titleVariants} className="Title">
+          <TitleOne className="Title">LUCKY BOT - AI RINGOTRADE PREDICTOR</TitleOne>
         </motion.div>
         <motion.div variants={titleVariants}>
           <TitleTwo>Схема торговли на RingoTrade</TitleTwo>
         </motion.div>
       </motion.div>
-
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueLeftVariants}>
-          <DialogueLeft>Вы зарабатываете на RingoTrade?</DialogueLeft>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueRightVariants}>
-          <DialogueRight>Да, но но часто я ошибаюсь в прогнозах</DialogueRight>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueRightVariants}>
-          <DialogueRight>Вот бы кто то меня трахнул</DialogueRight>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueLeftVariants}>
-          <DialogueLeft>
-            Мы разработали Искуственный интеллект, который со 100% вероятностью
-            прогнозирует цифру
-          </DialogueLeft>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueRightVariants}>
-          <DialogueRight>
-            И как ему удается прогнозировать с такой точностью?
-          </DialogueRight>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueLeftVariants}>
-          <DialogueLeft>
-            У нас огромная база данных, которую анализирует Искуственный
-            интеллект на суперпроцессоре
-          </DialogueLeft>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="Message"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 1 }}
-      >
-        <motion.div variants={dialogueRightVariants}>
-          <DialogueRight>
-            Как воспользоваться Искуственным интеллектом?
-          </DialogueRight>
-        </motion.div>
-      </motion.div>
+      <div className="Results">
+        <Results />
+      </div>
     </StyledMain>
   );
 }
@@ -153,38 +86,6 @@ const titleVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.3,
-      duration: 1.0,
-    },
-  },
-};
-
-const dialogueLeftVariants: Variants = {
-  offscreen: {
-    x: -200,
-    rotate: 0,
-  },
-  onscreen: {
-    x: 0,
-    rotate: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
-      duration: 1.0,
-    },
-  },
-};
-
-const dialogueRightVariants: Variants = {
-  offscreen: {
-    x: 200,
-    rotate: 0,
-  },
-  onscreen: {
-    x: 0,
-    rotate: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
       duration: 1.0,
     },
   },
