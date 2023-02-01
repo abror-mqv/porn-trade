@@ -7,7 +7,7 @@ import RunLine from "../../fabrics/RunLine";
 
 export default function Main() {
   const StyledMain = styled.main`
-    height: 100vh;
+    /* height: 100vh; */
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 10;
@@ -17,7 +17,6 @@ export default function Main() {
       width: 100vw;
       /* margin-left: -20px; */
       z-index: 9000000;
-
     }
     .FMC {
       margin-bottom: 10px;
@@ -31,9 +30,14 @@ export default function Main() {
       margin-bottom: 80px;
       margin-top: 30px;
     }
-    .Title{
+    .Title {
       max-width: 80%;
       margin-left: 10%;
+    }
+    @media screen and (min-width: 900px) {
+      .Blub{
+        height: 250px;
+      }
     }
   `;
   return (
@@ -47,7 +51,9 @@ export default function Main() {
       >
         <motion.div className="Blub" variants={blobVariants}></motion.div>
         <motion.div variants={titleVariants} className="Title">
-          <TitleOne className="Title">LUCKY BOT - AI RINGOTRADE PREDICTOR</TitleOne>
+          <TitleOne className="Title">
+            LUCKY BOT - AI RINGOTRADE PREDICTOR
+          </TitleOne>
         </motion.div>
         <motion.div variants={titleVariants}>
           <TitleTwo>Схема торговли на RingoTrade</TitleTwo>
@@ -63,15 +69,15 @@ export default function Main() {
 const blobVariants: Variants = {
   offscreen: {
     y: -300,
-    rotate: 180,
+    rotate: 720,
   },
   onscreen: {
     y: 0,
     rotate: 0,
     transition: {
       type: "spring",
-      bounce: 0.7,
-      duration: 1.8,
+      bounce: 0.5,
+      duration: 2.4,
     },
   },
 };

@@ -9,8 +9,14 @@ function Dialogue() {
     overflow-x: hidden;
     margin-top: 40px;
     position: relative;
-  `
-  const lemon = Array.prototype
+    @media screen and (min-width: 900px) {
+      margin-left: 15%;
+      max-width: 70%;
+      border-left: 1px solid #01d695;
+      border-right: 1px solid #01d695;
+    }
+  `;
+  const lemon = Array.prototype;
   return (
     <StyledDialogue>
       {Chat.map((mes) => {

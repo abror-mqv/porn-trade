@@ -44,11 +44,11 @@ const StyledTelegram = styled.div`
       backdrop-filter: blur(7px);
       border: 2px solid #01d69632;
       border-radius: 12px;
-
+      color: #f5f5f5aa;
       /* -webkit-box-shadow: 0px 0px 29px -12px rgba(1, 214, 149, 1);
         -moz-box-shadow: 0px 0px 29px -12px rgba(1, 214, 149, 1);
         box-shadow: -4px 2px 20px -12px rgba(1, 214, 149, 1); */
-      font-weight: 200;
+      font-weight: 2300;
       font-size: 1.1rem;
       line-height: 140%;
       letter-spacing: 0.10rem;

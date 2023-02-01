@@ -7,7 +7,6 @@ const Path = (props: JSX.IntrinsicAttributes & SVGMotionProps<SVGPathElement> & 
     strokeWidth="3"
     // stroke="hsl(0, 0%, 18%)"
     stroke="#00bbff"
-    
     strokeLinecap="round"
     {...props}
   />

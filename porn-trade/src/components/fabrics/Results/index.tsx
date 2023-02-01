@@ -11,6 +11,7 @@ export default function Results() {
     font-weight: 500;
     margin-top: 0px;
     color: #a5e5ff;
+    
   `;
   function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
@@ -30,9 +31,8 @@ export default function Results() {
         backgroundColor: "rgb(94 109 129 / 35%)",
         backdropFilter: "blur(10px)",
         // borderRadius: "26px",
-        width: "90%",
-        marginLeft: "3%",
         padding: "2%",
+        
         
       }}
     >

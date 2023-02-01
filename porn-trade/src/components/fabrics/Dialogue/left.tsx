@@ -10,7 +10,7 @@ export default function DialogueLeft({ children }: any) {
     margin-left: 4%;
     font-weight: 300;
     p {
-      padding: 6px 4px 8px 18px;
+      padding: 6px 14px 8px 18px;
       border-radius: 0px 16px 16px 16px;
       background-color: rgb(94 109 129 / 35%);
       backdrop-filter: blur(4px);

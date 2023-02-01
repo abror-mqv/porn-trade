@@ -24,13 +24,14 @@ const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 export const MenuItem = ({ i, data }: any) => {
   const style = { border: `2px solid ${colors[i]}` };
   const StyledMenuItem = styled.div`
+  background-color: #ffffff58;
     background-image: url(${`/media/${data.picture}`});
     background-position: center;
     background-size: 32px;
     background-repeat: no-repeat;
   `;
   const StyledFuckingText = styled.p`
-    color: black;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -35,11 +35,7 @@ const RunLine = () => {
       .track > h3 {
         margin: 20px 0;
         font-size: 3rem;
-        /* font-family: Antonio; */
-        /* -webkit-text-fill-color: rgba(255, 255, 255, 0);F
-        -webkit-text-stroke-width: 2px; */
-        /* -webkit-text-stroke-color: #f4965c4c; */
-        color: #ffffff59;
+        color: rgba(255, 255, 255, 0.05);
         text-transform: uppercase;
       }
     }

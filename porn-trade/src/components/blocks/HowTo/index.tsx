@@ -13,6 +13,7 @@ export default function HowTo() {
       flex-direction: column;
       justify-content: flex-start;
       gap: 36px;
+      min-height: 400px;
       a {
         display: block;
         position: relative;
@@ -39,6 +40,12 @@ export default function HowTo() {
         box-shadow: 0px 0px 29px -12px rgba(1, 214, 149, 1);
         background-color: rgb(94 109 129 / 35%);
         backdrop-filter: blur(2px);
+        transition: 0.2s;
+      }
+      a:hover{
+        background-color: white;
+        color: #01d695;
+        font-weight: 900;
       }
       .ChoosePlanButton {
         background-color: #3f505f;

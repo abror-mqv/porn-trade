@@ -119,6 +119,12 @@ const StyledEbout = styled.div`
     box-shadow: 0px 0px 29px -12px rgba(1, 214, 149, 1);
     background-color: rgb(94 109 129 / 35%);
     backdrop-filter: blur(2px);
+    transition: 0.2;
+  }
+  .ChoosePlanButton:hover {
+    background-color: white;
+    color: #01d695;
+    font-weight: 900;
   }
   .MARG {
     height: 80px;

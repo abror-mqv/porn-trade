@@ -1,15 +1,20 @@
 body {
-  background-color: #00bbff;
   color: #bec0c2;
 }
+
 .Blub {
   /* background-image: url("./blob-1.gif"); */
-  background-image: url("../public/media/blob-1.svg");
+  background-image: url("../public/media/electronic\ \(1\)\ 1.png");
+  /* background-image: url("../public/media/electronic.png"); */
+
   /* background-color: #00bbff; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
+}
+@media screen and (min-width: 900px) {
+  
 }
 
 .App {
@@ -34,7 +39,10 @@ nav {
   left: 0;
   bottom: 0;
   width: 300px;
-  background: #ffffff;
+  background: #222c40;
+  border-left: #01d695 1px solid;
+  border-right: #01d695 2px solid;
+
 }
 
 button {
