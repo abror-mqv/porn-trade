@@ -13,7 +13,6 @@ const StyledIndex = styled.div`
     text-align: center;
     padding: 30px;
     font-size: 18px;
-    
   }
   .Prices {
     display: flex;
@@ -87,6 +86,11 @@ const StyledIndex = styled.div`
       }
     }
   }
+  @media screen and (min-width: 900px) {
+    .Prices {
+      flex-direction: row;
+    }
+  }
   padding-bottom: 40px;
 `;
 function Index() {
@@ -97,12 +101,12 @@ function Index() {
   return (
     <StyledIndex>
       <p className="Title">Откройте доступ к Lucky Bot</p>
-      <div className="Prices">
       <ParticlesComponent theme="light" />
+      <div className="Prices">
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          className="Prices"
+          className="Princes"
           viewport={{ once: false, amount: 0.1 }}
         >
           <motion.div variants={blobVariants} className="Price">
@@ -130,7 +134,7 @@ function Index() {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          className="Prices"
+          className="Princes"
           viewport={{ once: false, amount: 0.1 }}
         >
           <motion.div variants={blobVariants} className="Price">
@@ -156,7 +160,7 @@ function Index() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="Prices"
+          className="Princes"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.1 }}

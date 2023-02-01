@@ -29,8 +29,10 @@ const StyledEbout = styled.div`
   }
   p {
     margin: 0;
-    font-size: 3.4vh;
+    font-size: 4.4vh;
     margin-bottom: 12px;
+    font-weight: 900;
+    letter-spacing: 5px;
   }
   .Steps {
     margin-top: 40px;
@@ -62,7 +64,7 @@ const StyledEbout = styled.div`
     .Info {
       width: 80%;
       height: max-content;
-      background-color: #6d8aa357;
+      background-color: #6d8aa326;
       backdrop-filter: blur(8px);
       padding: 18px 12px;
       border-radius: 4px;
@@ -85,7 +87,8 @@ const StyledEbout = styled.div`
     }
   }
   .parag {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    height: 130px;
   }
   a:active {
     color: #bcffeb;
@@ -142,18 +145,18 @@ function Index() {
         <div className="Step_One">
           <div className="Info One">
             <div className="parag">
-              <p> 1) Выберите план:</p>
+              <p>выберите план:</p>
               Сперва выберите подходящий вам тариф из{" "}
               <Link to="get"> этого списка</Link>
             </div>
             <div className="parag">
-              <p>2) Оплата:</p>
+              <p>оплата:</p>
               Оплатите ранее выбранный тариф любым удобным{" "}
               <Link to="payment"> здесь</Link>. Следуйте инструкциям оплаты в
               зависимости от выбранного вами способа
             </div>
             <div className="parag">
-              <p>3) Выигрывайте:</p>
+              <p>выигрывайте:</p>
               После успешной оплаты вам открывается доступ к боту на этом сайте,
               который будет каждый раз показывать число, которое выпадет
               следующим. Делать деньги уже за вами)
