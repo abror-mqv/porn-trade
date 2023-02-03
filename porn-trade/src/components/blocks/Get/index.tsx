@@ -89,6 +89,14 @@ const StyledIndex = styled.div`
   @media screen and (min-width: 900px) {
     .Prices {
       flex-direction: row;
+      align-items: flex-start;
+      li{
+        font-size: 20px !important;
+      }
+    }
+    .Title{
+      padding: 0;
+      margin-top: 10;
     }
   }
   padding-bottom: 40px;
